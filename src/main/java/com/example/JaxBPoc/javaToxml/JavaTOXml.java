@@ -31,7 +31,9 @@ public class JavaTOXml {
         String xmlContent = sw.toString();
         System.out.println( xmlContent );
     }
-   public static  void jaxtoXmlfile(Employee e) throws JAXBException, FileNotFoundException {
+
+    /** java objects to xml file **/
+    public static  void jaxtoXmlfile(Employee e) throws JAXBException, FileNotFoundException {
        JAXBContext jaxbContext 	= JAXBContext.newInstance( Employee.class );
        Marshaller jaxbMarshaller 	= jaxbContext.createMarshaller();
 
