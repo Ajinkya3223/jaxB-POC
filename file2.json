@@ -1,0 +1,14 @@
+{
+  "authStatus": {
+    "authStatusCode": 131,
+    "authStatusDescription": "Authentication was successful"
+  },
+  "results": [
+    {
+      "statusCode": 152,
+      "statusDescription": "The acknowledgement was successful.",
+      "invoiceNumber": "",
+      "beepTransactionID": "1289282705"
+    }
+  ]
+}

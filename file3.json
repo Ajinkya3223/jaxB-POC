@@ -1,0 +1,71 @@
+{
+  "merchantPaymentID": 30461165,
+  "apiPortNumber": 0,
+  "pollerFrequency": 0,
+  "serviceCode": "VODABUNDLES",
+  "extraData": {
+    "38874292": {
+      "pushToOriginator": true,
+      "isThirdPartyPayment": "false",
+      "appVersion": "",
+      "amount": 5,
+      "debitMessage": "Transaction successful.",
+      "requestOrigin": "MULA_USSD",
+      "accountNumber": 233504665467,
+      "deviceName": "",
+      "transactionID": "621d34658ac80c8c7c10e633",
+      "mno": "MTN",
+      "requestLogID": "12855813",
+      "totalAmountCharged": 5,
+      "dateCreated": "2022-02-28 20:45:19",
+      "productCode": "DATANVDR5WLY",
+      "name": "233556171673",
+      "chargeAmount": 0,
+      "debitStatus": 1,
+      "paybillNumber": "1032"
+    }
+  },
+  "merchantPaymentStatus": 139,
+  "serviceUrl": "",
+  "merchantPaymentCurrencyCode": "GHS",
+  "wrapperUrl": "",
+  "wsdlFile": "",
+  "protocol": "default",
+  "sslEnabled": 0,
+  "numberOfSends": 0,
+  "invoiceNumber": "",
+  "merchantPaymentDate": "2022-02-28 20:46:02",
+  "merchantPaymentCustomerName": "Customer",
+  "apiUserName": "",
+  "merchantPaymentUUID": "1289282705",
+  "merchantPaymentAccountNumber": "233504665467",
+  "paymentMode": [
+    "USSD_PUSH"
+  ],
+  "merchantPaymentMSISDN": "233556171673",
+  "apiFunctionName": "",
+  "payerTransactionID": [
+    "621d34658ac80c8c7c10e633"
+  ],
+  "apiPassword": "",
+  "paymentUUID": "1289282705",
+  "payerClientCode": [
+    "NSANOMOMO"
+  ],
+  "sslCertificatePath": "",
+  "isTokenService": 0,
+  "merchantPaymentAmount": 5,
+  "paymentPusherProcessorClass": "",
+  "requestOriginIDs": [
+    "7"
+  ],
+  "firstSend": "",
+  "maxNumberOfSends": 1,
+  "narration": "Transaction successful.",
+  "hubCreationDate": "2022-02-28 20:46:02",
+  "allowsPolling": 0,
+  "serviceID": 74,
+  "lastSend": "2022-02-28 20:46:02",
+  "nextSend": "2022-02-28 20:46:02",
+  "autoAcknowledgePayment": 1
+}

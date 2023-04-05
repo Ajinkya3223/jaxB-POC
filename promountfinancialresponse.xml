@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<promountfinancialresponse>
+    <function>updatepreceipts</function>
+    <receiptDate>20210921</receiptDate>
+    <cashierNo>505</cashierNo>
+    <reference>136183273</reference>
+    <date>20210921</date>
+    <mcno>505</mcno>
+    <operator>B5</operator>
+    <recno>16200</recno>
+    <icode>zz</icode>
+    <paytype>C</paytype>
+    <account>1115000536</account>
+    <ref>136183273</ref>
+    <amount>380000</amount>
+</promountfinancialresponse>
