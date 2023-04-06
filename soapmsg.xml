@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+    <soapenv:Header />
+    <soapenv:Body>
+        <tem:SendToWallet>
+            <tem:strReq>
+
+                <MobiPay ver="1.0" InstitutionID="letsbank1" UserName="letsbank1" Password="L3ttMo1paO12">
+                <SendToWalletRequest>
+                <TransType>1</TransType>
+                <Amount>200000</Amount>
+                <Description>transfer</Description>
+                <Recipient>264815626131</Recipient>
+                <SMSText>Send2Wallet BlueWallet</SMSText
+                ><ReqTraceID>16430</ReqTraceID>
+                <DateTime>2019-06-28 16:52:59</DateTime>
+                </SendToWalletRequest>
+                </MobiPay></tem:strReq>
+        </tem:SendToWallet>
+    </soapenv:Body>
+</soapenv:Envelope>
