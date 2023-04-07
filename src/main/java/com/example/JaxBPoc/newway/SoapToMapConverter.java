@@ -19,27 +19,27 @@ public class SoapToMapConverter {
     public static Map<String, Object> convertSoapToMap(String soapXml) throws Exception {
         Map<String, Object> result = new HashMap<>();
 
-        // Use the built-in XML parser to parse the SOAP XML into a DOM document
+        /** Use the built-in XML parser to parse the SOAP XML into a DOM document **/
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(new ByteArrayInputStream(soapXml.getBytes("UTF-8")));
 
-        // Extract the body element from the SOAP envelope
+        /** Extract the body element from the SOAP envelope **/
         Element bodyElement = (Element) doc.getElementsByTagName("soapenv:Body").item(0);
 
-        // Extract the strReq element from the SendToWallet element
+        /** Extract the strReq element from the SendToWallet element **/
         Element sendToWalletElement = (Element) bodyElement.getElementsByTagName("tem:SendToWallet").item(0);
         Element strReqElement = (Element) sendToWalletElement.getElementsByTagName("tem:strReq").item(0);
 
-        // Get the CDATA content from the strReq element
+        /** Get the CDATA content from the strReq element **/
         String cdataContent = strReqElement.getTextContent();
 
-        // Parse the CDATA content as XML
+        /** Parse the CDATA content as XML **/
         DocumentBuilder innerBuilder = dbFactory.newDocumentBuilder();
         Document innerDoc = innerBuilder.parse(new ByteArrayInputStream(cdataContent.getBytes("UTF-8")));
         Element mobiPayElement = (Element) innerDoc.getElementsByTagName("MobiPay").item(0);
 
-        // Extract the attributes from the MobiPay element
+        /** Extract the attributes from the MobiPay element **/
         Map<String, String> mobiPayAttributes = new HashMap<>();
         mobiPayAttributes.put("ver", mobiPayElement.getAttribute("ver"));
         mobiPayAttributes.put("InstitutionID", mobiPayElement.getAttribute("InstitutionID"));
@@ -47,10 +47,10 @@ public class SoapToMapConverter {
         mobiPayAttributes.put("Password", mobiPayElement.getAttribute("Password"));
         result.put("MobiPay", mobiPayAttributes);
 
-        // Extract the SendToWalletRequest element
+        /** Extract the SendToWalletRequest element **/
         Element sendToWalletRequestElement = (Element) mobiPayElement.getElementsByTagName("SendToWalletRequest").item(0);
 
-        // Extract the child elements of the SendToWalletRequest element
+        /** Extract the child elements of the SendToWalletRequest element **/
         NodeList childNodes = sendToWalletRequestElement.getChildNodes();
         Map<String, Object> sendToWalletRequest = new HashMap<>();
         for (int i = 0; i < childNodes.getLength(); i++) {
